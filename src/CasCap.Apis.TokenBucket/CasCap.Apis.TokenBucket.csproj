@@ -9,10 +9,6 @@
     <Authors>esendexdev,bbeck,f2calv</Authors>
     <Description>This library provides an implementation of a token bucket algorithm which is useful for providing rate limited access to a portion of code. Token Bucket implementation ported from https://github.com/bbeck/token-bucket</Description>
     <PackageTags>TokenBucket LeakyBucket FlowControl</PackageTags>
-    <PackageProjectUrl>https://github.com/f2calv/TokenBucket</PackageProjectUrl>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
 
   <ItemGroup>
