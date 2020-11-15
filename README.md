@@ -13,7 +13,8 @@ See also:
 * [Wikipedia - Token Bucket](http://en.wikipedia.org/wiki/Token_bucket)
 * [Wikipedia - Leaky Bucket](http://en.wikipedia.org/wiki/Leaky_bucket)
 
-This is a conversion of the existing [esendex](https://github.com/esendex/TokenBucket) library to target .NET Standard 2.0 & .NET 5.0, which in turn was a port to C# of the original work by [Brandon Beck](https://github.com/bbeck/token-bucket).
+This is an update of the existing [esendex](https://github.com/esendex/TokenBucket) library to now target .NET Standard 2.0 & .NET 5.0.
+The [esendex](https://github.com/esendex/TokenBucket) library was in turn a port to C# of the original work by [Brandon Beck](https://github.com/bbeck/token-bucket).
 
 ## Usage
 
@@ -66,7 +67,7 @@ while (true) {
 Install from NuGet
 
 ```PowerShell
-Install-Package TokenBucketV2
+Install-Package CasCap.Apis.TokenBucket
 ```
 
 ## License
