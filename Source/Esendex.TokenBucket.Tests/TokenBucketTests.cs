@@ -1,7 +1,6 @@
-using System;
 using Moq;
 using NUnit.Framework;
-
+using System;
 namespace Esendex.TokenBucket.Tests
 {
     public class TokenBucketTests
@@ -21,22 +20,22 @@ namespace Esendex.TokenBucket.Tests
             _bucket = new TokenBucket(Capacity, _refillStrategy, _sleepStrategy.Object);
         }
 
-        [Test, ExpectedException(typeof (ArgumentOutOfRangeException))]
+        [Test]
         public void TryConsumeZeroTokens()
         {
-            _bucket.TryConsume(0);
+            Assert.Throws<ArgumentOutOfRangeException>(() => _bucket.TryConsume(0));
         }
 
-        [Test, ExpectedException(typeof (ArgumentOutOfRangeException))]
+        [Test]
         public void TryConsumeNegativeTokens()
         {
-            _bucket.TryConsume(-1);
+            Assert.Throws<ArgumentOutOfRangeException>(() => _bucket.TryConsume(-1));
         }
 
-        [Test, ExpectedException(typeof (ArgumentOutOfRangeException))]
+        [Test]
         public void TryConsumeMoreThanCapacityTokens()
         {
-            _bucket.TryConsume(100);
+            Assert.Throws<ArgumentOutOfRangeException>(() => _bucket.TryConsume(100));
         }
 
         [Test]

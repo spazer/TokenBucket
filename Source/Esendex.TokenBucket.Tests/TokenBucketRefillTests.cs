@@ -1,15 +1,14 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Diagnostics;
-using System.Threading;
-using NUnit.Framework;
-
+using System.Threading.Tasks;
 namespace Esendex.TokenBucket.Tests
 {
     [TestFixture]
     public class TokenBucketRefillTests
     {
         [Test, Explicit("Long Running")]
-        public void RateLimitTests()
+        public async Task RateLimitTests()
         {
             const int totalConsumes = 500;
             const int refillRate = 40;
@@ -24,7 +23,7 @@ namespace Esendex.TokenBucket.Tests
             sw.Start();
             for (var i = 0; i < totalConsumes; i++)
             {
-                if (i % 3 == 0) Thread.Sleep(1000 / refillRate * 2);
+                if (i % 3 == 0) await Task.Delay(1000 / refillRate * 2);
                 tokenBucket.Consume();
             }
 

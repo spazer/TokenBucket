@@ -1,17 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30709.64
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esendex.TokenBucket", "Esendex.TokenBucket\Esendex.TokenBucket.csproj", "{35C91A50-8409-415F-832C-054874EF72FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Esendex.TokenBucket.Tests", "Esendex.TokenBucket.Tests\Esendex.TokenBucket.Tests.csproj", "{BE64A2D3-42C7-4227-BF40-AAA8990F99C7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{8A0ECBB0-D56E-4742-BC68-9A1C840E28C3}"
-	ProjectSection(SolutionItems) = preProject
-		..\LICENSE = ..\LICENSE
-		..\README.md = ..\README.md
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAC18C18-7909-4607-A6F8-731D242C8BB9}
 	EndGlobalSection
 EndGlobal

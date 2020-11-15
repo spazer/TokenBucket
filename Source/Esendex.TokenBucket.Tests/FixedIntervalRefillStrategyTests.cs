@@ -1,15 +1,14 @@
-using System;
 using NUnit.Framework;
-
+using System;
 namespace Esendex.TokenBucket.Tests
 {
     public class FixedIntervalRefillStrategyTest
     {
-        private const long NumberOfTokens = 5;
-        private readonly TimeSpan _period = TimeSpan.FromSeconds(10);
+        const long NumberOfTokens = 5;
+        readonly TimeSpan _period = TimeSpan.FromSeconds(10);
 
-        private MockTicker _ticker;
-        private FixedIntervalRefillStrategy _strategy;
+        MockTicker _ticker;
+        FixedIntervalRefillStrategy _strategy;
 
         [SetUp]
         public void SetUp()
@@ -67,9 +66,9 @@ namespace Esendex.TokenBucket.Tests
             Assert.That(_strategy.Refill(), Is.EqualTo(NumberOfTokens));
         }
 
-        private sealed class MockTicker : Ticker
+        sealed class MockTicker : Ticker
         {
-            private long _now;
+            long _now;
 
             public override long Read()
             {

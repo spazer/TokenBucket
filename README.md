@@ -1,5 +1,5 @@
-Introduction
-------------
+# Introduction
+
 This library provides an implementation of a token bucket algorithm which is useful for providing rate limited access
 to a portion of code.  The implementation provided is that of a "leaky bucket" in the sense that the bucket has a finite
 capacity and any added tokens that would exceed this capacity will "overflow" out of the bucket and be lost forever.
@@ -8,17 +8,15 @@ In this implementation the rules for refilling the bucket are encapsulated in a 
 to attempting to consume any tokens the refill strategy will be consulted to see how many tokens should be added to the
 bucket
 
-We use [AppVeyor](http://www.appveyor.com/about) for build verification.  [![Build status](https://ci.appveyor.com/api/projects/status/vg8r10d4irxdapd1/branch/master?svg=true)](https://ci.appveyor.com/project/Esendex/tokenbucket/branch/master)
-
 See also:
 
 * [Wikipedia - Token Bucket](http://en.wikipedia.org/wiki/Token_bucket)
 * [Wikipedia - Leaky Bucket](http://en.wikipedia.org/wiki/Leaky_bucket)
 
-This is a port to C# of the original work by [Brandon Beck](https://github.com/bbeck/token-bucket).
+This is a conversion of the existing [esendex](https://github.com/esendex/TokenBucket) library to target .NET Standard 2.0 & .NET 5.0, which in turn was a port to C# of the original work by [Brandon Beck](https://github.com/bbeck/token-bucket).
 
-Usage
------
+## Usage
+
 Using a token bucket is incredibly easy and is best illustrated by an example.  Suppose you have a piece of code that
 polls a website and you would only like to be able to access the site once per second:
 
@@ -63,16 +61,18 @@ while (true) {
 }
 ```
 
-NuGet
------
+## NuGet
+
 Install from NuGet
 
 ```PowerShell
-Install-Package Esendex.TokenBucket
+Install-Package TokenBucketV2
 ```
 
-License
--------
+## License
+
+Copyright 2020 Alex Vincent
+
 Copyright 2015 Esendex Ltd
 
 Copyright 2012-2014 Brandon Beck
