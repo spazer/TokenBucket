@@ -1,3 +1,12 @@
+[azdo-badge]: https://dev.azure.com/f2calv/github/_apis/build/status/f2calv.CasCap.Apis.TokenBucket?branchName=master
+[azdo-url]: https://dev.azure.com/f2calv/github/_build/latest?definitionId=9&branchName=master
+[azdo-coverage-url]: https://img.shields.io/azure-devops/coverage/f2calv/github/9
+[cascap.apis.tokenbucket-badge]: https://img.shields.io/nuget/v/CasCap.Apis.TokenBucket?color=blue
+[cascap.apis.tokenbucket-url]: https://nuget.org/packages/CasCap.Apis.TokenBucket
+
+[![Build Status][azdo-badge]][azdo-url] <!-- ![Code Coverage][azdo-coverage-url] --> [![Nuget][cascap.apis.tokenbucket-badge]][cascap.apis.tokenbucket-url]
+
+
 # Introduction
 
 This library provides an implementation of a token bucket algorithm which is useful for providing rate limited access
