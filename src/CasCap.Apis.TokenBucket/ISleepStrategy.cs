@@ -8,6 +8,6 @@ namespace CasCap.Apis.TokenBucket
         /// <summary>
         /// Sleep for a short period of time to allow other threads and system processes to execute.
         /// </summary>
-        void Sleep();
+        void Task.Delay(2000).Wait();
     }
 }
